@@ -1,7 +1,7 @@
 # Telegram Automation Bot 🤖
 
 A **Python-based bot** for automating message handling on **Telegram**.  
-Its main goal is to capture messages (text and images), process them, and store them in a database for further analysis or automation.
+Its main goal is to capture messages (text and images) and store them in a database for further analysis.
 
 ---
 
@@ -51,6 +51,7 @@ The bot continuously listens for incoming messages on Telegram. Its main workflo
 2. **Text Extraction:** If the message includes an image, the bot performs **OCR** to extract text from the image.  
 3. **Data Storage:** Both the message text and the OCR results are stored in a **PostgreSQL** database.
 4. **Event Triggering:** When certain conditions are met (e.g., a message matches specific keywords or the number of unsent messages exceeds a threshold), the bot automatically sends an **email notification** to alert the user. 
+
 
 
 
