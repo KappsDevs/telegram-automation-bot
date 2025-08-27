@@ -64,7 +64,7 @@ async def get_messages(event):
 
         if any(keyword.lower() in message.text.lower() for keyword in KEYWORDS) or any(
                 keyword.lower() in text.lower()for keyword in KEYWORDS):
-            database.insert_into_db(message, text)
+             await asyncio.to_thread(database.insert_into_db,message, text)
 
     except Exception as e:
         print(f"Error getting new message: {e}")
